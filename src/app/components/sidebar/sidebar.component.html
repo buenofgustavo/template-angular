@@ -1,11 +1,12 @@
 <div class="card">
 
-    <p-menubar [model]="items">
+    <p-menubar [model]="items2">
 
         <ng-template pTemplate="start">
             <div class="card flex justify-content-center">
-                <p-sidebar [(visible)]="sidebarVisible">
+                <p-sidebar #sidebarRef [(visible)]="sidebarVisible">
                     <img src="" alt="Logo">
+                    <p-menu [style]="{'width': '100%', 'border': 'none', 'margin': 'auto', 'margin-top': '1rem'}" [model]="items"></p-menu>
                 </p-sidebar>
             </div>
             <button 
