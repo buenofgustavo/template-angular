@@ -22,7 +22,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './sidebar.component.scss'
 })
 
-export class SidebarComponent implements OnInit {
+export class SidebarComponent {
   
   sidebarVisible: boolean = false;
 
@@ -31,14 +31,24 @@ export class SidebarComponent implements OnInit {
     console.log(this.sidebarVisible)
   }
 
-  items: MenuItem[] | undefined;
+  items: MenuItem[] = [
+    {
+      label: 'Tela Inicial',
+      items: [
+        {  
+          label: 'Home',
+          icon: 'pi pi-home',
+          route: ['/home']   
+        },
+      ]
+    },
+  ]
 
-  ngOnInit() {
-      this.items = [
-          {
-              label: 'Home',
-              icon: 'pi pi-home'
-          },
-      ];
-  }
+  items2: MenuItem[] = [
+    {  
+      label: 'Home',
+      icon: 'pi pi-home',
+      route: ['/home']   
+    },
+  ]
 }
