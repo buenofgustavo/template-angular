@@ -38,7 +38,8 @@ export class SidebarComponent {
         {  
           label: 'Home',
           icon: 'pi pi-home',
-          route: ['/home']   
+          routerouterLink: ['/home'],
+          command: () => this.toggleSidebar()
         },
       ]
     },
@@ -48,7 +49,7 @@ export class SidebarComponent {
     {  
       label: 'Home',
       icon: 'pi pi-home',
-      route: ['/home']   
+      routerouterLink: ['/home']   
     },
   ]
 }
