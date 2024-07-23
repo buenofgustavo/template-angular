@@ -11,12 +11,13 @@ import { MenubarModule } from 'primeng/menubar';
 import { BadgeModule } from 'primeng/badge';
 import { InputTextModule } from 'primeng/inputtext';
 import { CommonModule } from '@angular/common';
+import { MenuModule } from 'primeng/menu';
 
 @Component({
   selector: 'app-sidebar',
   standalone: true,
   imports: [SidebarModule, ButtonModule, NgIf, RippleModule, AvatarModule, StyleClassModule,
-    MenubarModule, BadgeModule, InputTextModule, CommonModule, AvatarGroupModule
+    MenubarModule, BadgeModule, InputTextModule, CommonModule, AvatarGroupModule, MenuModule
   ],
   templateUrl: './sidebar.component.html',
   styleUrl: './sidebar.component.scss'
@@ -38,7 +39,7 @@ export class SidebarComponent {
         {  
           label: 'Home',
           icon: 'pi pi-home',
-          routerouterLink: ['/home'],
+          routerLink: ['/home'],
           command: () => this.toggleSidebar()
         },
       ]
@@ -49,7 +50,7 @@ export class SidebarComponent {
     {  
       label: 'Home',
       icon: 'pi pi-home',
-      routerouterLink: ['/home']   
+      routerLink: ['/home']
     },
   ]
 }
